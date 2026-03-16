@@ -6,7 +6,7 @@ It worked - but more erros started when running server.
 
 ## backend overhaul
 
-# 🔧 **Complete Backend Overhaul with Proper Directory Structure**
+## 🔧 **Complete Backend Overhaul with Proper Directory Structure**
 
 The error `ModuleNotFoundError: No module named 'src'` means Python can't find your module. Let's rebuild the entire backend with a proper structure that actually works.
 
@@ -33,7 +33,7 @@ mkdir -p tests
 mkdir -p logs/{error,access,model}
 ```
 
-## 📦 **Step 2: Create __init__.py Files**
+## 📦 **Step 2: Create ```__init__.py``` Files**
 
 ```bash
 # Create __init__.py files in each directory
@@ -1005,7 +1005,7 @@ curl http://localhost:8000/metrics
 
 ## 📋 **Final Directory Structure**
 
-```
+```merm
 backend/
 ├── app/
 │   ├── __init__.py
