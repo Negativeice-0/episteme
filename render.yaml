@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: episteme-backend
+    runtime: python
+    repo: https://github.com/yourusername/episteme
+    plan: free
+    region: oregon
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+
+  - type: web
+    name: episteme-frontend
+    runtime: static
+    repo: https://github.com/yourusername/episteme
+    plan: free
+    region: oregon
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: ./frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://episteme-backend.onrender.com

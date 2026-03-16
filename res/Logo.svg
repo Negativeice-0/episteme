@@ -1,0 +1,8 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="white"/>
+  <circle cx="100" cy="100" r="80" stroke="#0a1929" stroke-width="8" fill="none"/>
+  <path d="M60 80 L100 40 L140 80 L100 120 L60 80Z" stroke="#ffb347" stroke-width="8" fill="none"/>
+  <circle cx="100" cy="100" r="20" fill="#0a1929"/>
+  <path d="M100 70 L100 130 M70 100 L130 100" stroke="#ffb347" stroke-width="8"/>
+  <text x="100" y="170" text-anchor="middle" fill="#0a1929" font-family="Lato" font-size="24" font-weight="600">EPISTEME</text>
+</svg>
