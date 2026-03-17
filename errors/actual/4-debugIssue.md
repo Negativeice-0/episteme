@@ -1,4 +1,9 @@
-# debug was flagging an error in backend/config urls.py and when installing it since it was not in requirements you should then add it to middleware, installed apps and in config/settings/base.py
+# Debug toolbar - only if installed - already installed in middleware ignore immediate instructions below -- ai hardcode
+
+-- this is the one to ignore
+ debug was flagging an error in backend/config urls.py and when installing it since it was not in requirements you should then add it to middleware, installed apps and in config/settings/base.py
+
+-- this is good to use
 
 ```bash
 
@@ -25,7 +30,9 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     
-    # Debug toolbar - only if installed
+
+
+    # Debug toolbar - only if installed - already installed in middleware igore install instructions from title
     if 'debug_toolbar' in settings.INSTALLED_APPS:
         urlpatterns += [path('__debug__/', include('debug_toolbar.urls'))]
         ```

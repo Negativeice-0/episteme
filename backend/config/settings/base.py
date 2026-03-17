@@ -30,7 +30,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # Third party apps
-    'debug_toolbar',
     'rest_framework',
     'corsheaders',
     
