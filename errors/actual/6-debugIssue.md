@@ -1,4 +1,4 @@
-# debug was flagging an error in backend/config urls.py
+# debug was flagging an error in backend/config urls.py and when installing it since it was not in requirements you should then add it to middleware, installed apps and in config/settings/base.py
 
 ```bash
 
