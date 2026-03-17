@@ -4,87 +4,29 @@
 {% block title %}{{ title }} | Episteme Admin{% endblock %}
 
 {% block extrastyle %}
-{{ block.super }}
-<style>
-    :root {
-        --navy: #0a1929;
-        --gold: #ffb347;
-        --gold-light: #ffd700;
-    }
-    
-    #header {
-        background: var(--navy);
-        color: white;
-    }
-    
-    #branding h1 {
-        color: var(--gold) !important;
-        font-weight: 600;
-    }
-    
-    #branding h1 a:link, #branding h1 a:visited {
-        color: var(--gold);
-    }
-    
-    .module h2, .module caption {
-        background: var(--navy);
-        color: white;
-    }
-    
-    div.breadcrumbs {
-        background: var(--gold);
-        color: var(--navy);
-    }
-    
-    div.breadcrumbs a {
-        color: var(--navy);
-    }
-    
-    .button, input[type=submit], input[type=button], .submit-row input {
-        background: var(--navy);
-        color: white;
-    }
-    
-    .button:hover, input[type=submit]:hover, input[type=button]:hover {
-        background: #1a2b3c;
-    }
-    
-    .button.default {
-        background: var(--gold);
-        color: var(--navy);
-    }
-    
-    .button.default:hover {
-        background: var(--gold-light);
-    }
-    
-    a:link, a:visited {
-        color: var(--navy);
-    }
-    
-    #recent-actions-module h2 {
-        background: var(--gold) !important;
-        color: var(--navy) !important;
-    }
-</style>
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'admin/css/episteme-admin.css' %}">
 {% endblock %}
 
 {% block branding %}
-<h1 id="site-name">
+  <h1 id="site-name">
     <a href="{% url 'admin:index' %}">
-        <span style="color: #ffb347;">Episteme</span> Admin
+      <img src="{% static 'admin/images/episteme-logo.svg' %}" alt="Episteme" class="logo-icon">
+      <span class="logo-text"><span class="logo-episteme">Episteme</span> Admin</span>
     </a>
-</h1>
+  </h1>
 {% endblock %}
 
 {% block welcome-msg %}
-Welcome to Episteme |
+  Welcome to Episteme Control Panel
 {% endblock %}
 
 {% block userlinks %}
-    <a href="/">View Site</a> /
+  <div class="user-links">
+    <a href="/" class="link-button">← View Site</a>
     {% if user.has_usable_password %}
-    <a href="{% url 'admin:password_change' %}">Change password</a> /
+      <a href="{% url 'admin:password_change' %}" class="link-button">Change Password</a>
     {% endif %}
-    <a href="{% url 'admin:logout' %}">Log out</a>
+    <a href="{% url 'admin:logout' %}" class="link-button logout">Log Out</a>
+  </div>
 {% endblock %}

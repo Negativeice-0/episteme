@@ -1,0 +1,390 @@
+/* Episteme Admin Theme - Mobile First */
+
+:root {
+  --navy: #0a1929;
+  --gold: #ffb347;
+  --gold-light: #ffd700;
+  --text-light: #f5f5f5;
+  --border-color: #e0e0e0;
+}
+
+/* ===== BASE STYLES ===== */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f8f9fa;
+}
+
+/* ===== HEADER ===== */
+#header {
+  background: linear-gradient(135deg, var(--navy) 0%, #1a2b3c 100%);
+  color: var(--text-light);
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#branding h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+#branding h1 a {
+  color: var(--gold) !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#branding h1 a:hover {
+  color: var(--gold-light);
+}
+
+/* ===== BREADCRUMBS ===== */
+div.breadcrumbs {
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: var(--navy);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin: 1rem;
+  font-size: 0.9rem;
+}
+
+div.breadcrumbs a {
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+div.breadcrumbs a:hover {
+  opacity: 0.8;
+}
+
+/* ===== BUTTONS ===== */
+.button,
+input[type="submit"],
+input[type="button"],
+.submit-row input {
+  background: var(--navy);
+  color: var(--text-light);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background: #1a2b3c;
+  box-shadow: 0 4px 12px rgba(10, 25, 41, 0.2);
+  transform: translateY(-2px);
+}
+
+.button.default {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+/* ===== LOGO STYLING ===== */
+.logo-icon {
+  height: 2rem;
+  width: auto;
+  margin-right: 0.75rem;
+  vertical-align: middle;
+  filter: drop-shadow(0 2px 4px rgba(255, 179, 71, 0.3));
+  transition: filter 0.3s ease;
+}
+
+#branding h1 a:hover .logo-icon {
+  filter: drop-shadow(0 4px 8px rgba(255, 179, 71, 0.5));
+}
+
+.logo-text {
+  vertical-align: middle;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.logo-episteme {
+  color: var(--gold);
+}
+
+/* ===== USER LINKS ===== */
+.user-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.link-button {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+}
+
+.link-button:hover {
+  background: rgba(255, 179, 71, 0.1);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.link-button.logout {
+  background: rgba(255, 0, 0, 0.1);
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.link-button.logout:hover {
+  background: rgba(255, 0, 0, 0.2);
+}
+
+/* ===== MODULES & SECTIONS ===== */
+.module {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.module h2,
+.module caption {
+  background: linear-gradient(135deg, var(--navy) 0%, #1a2b3c 100%);
+  color: var(--text-light);
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-bottom: 3px solid var(--gold);
+}
+
+.module table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.module table thead th {
+  background: #f8f9fa;
+  color: var(--navy);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.module table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.module table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.2s ease;
+}
+
+.module table tbody tr:hover {
+  background: rgba(255, 179, 71, 0.05);
+}
+
+.module table tbody td {
+  padding: 0.75rem 1rem;
+  color: #333;
+}
+
+/* ===== FORMS ===== */
+.form-row {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  background: white;
+}
+
+.form-row:last-child {
+  border-bottom: none;
+}
+
+.form-row label {
+  font-weight: 600;
+  color: var(--navy);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-row input,
+.form-row textarea,
+.form-row select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-row input:focus,
+.form-row textarea:focus,
+.form-row select:focus {
+  border-color: var(--gold);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 179, 71, 0.2);
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+  #header {
+    padding: 0.75rem;
+  }
+
+  #branding h1 {
+    font-size: 1.25rem;
+  }
+
+  .logo-icon {
+    height: 1.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+  }
+
+  .user-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .link-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .module h2,
+  .module caption {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .module table thead th,
+  .module table tbody td {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .form-row {
+    padding: 0.75rem;
+  }
+
+  .form-row input,
+  .form-row textarea,
+  .form-row select {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== TABLET ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #branding h1 {
+    font-size: 1.35rem;
+  }
+
+  .logo-icon {
+    height: 1.75rem;
+  }
+
+  .logo-text {
+    font-size: 1.35rem;
+  }
+
+  .module h2,
+  .module caption {
+    font-size: 1.15rem;
+  }
+
+  .module table thead th,
+  .module table tbody td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== DARK MODE SUPPORT (optional) ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --navy: #0f2a4a;
+    --gold: #ffcc66;
+    --gold-light: #ffeb99;
+    --text-light: #ffffff;
+    --border-color: #444;
+    --background: #121212;
+  }
+
+  body {
+    background: var(--background);
+  }
+
+  #header {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3b5d 100%);
+  }
+
+  .module {
+    background: #1e1e1e;
+    border-color: #444;
+  }
+
+  .module h2,
+  .module caption {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3b5d 100%);
+    color: var(--text-light);
+  }
+
+  .module table thead th {
+    background: #2d2d2d;
+    color: var(--text-light);
+  }
+
+  .module table tbody tr {
+    border-color: #444;
+  }
+
+  .module table tbody tr:hover {
+    background: rgba(255, 204, 102, 0.05);
+  }
+
+  .module table tbody td {
+    color: var(--text-light);
+  }
+
+  .form-row {
+    background: #2d2d2d;
+  }
+
+  .form-row label {
+    color: var(--text-light);
+  }
+
+  .form-row input,
+  .form-row textarea,
+  .form-row select {
+    background: #333;
+    border-color: #555;
+    color: var(--text-light);
+  }
+
+  .form-row input:focus,
+  .form-row textarea:focus,
+  .form-row select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(255, 204, 102, 0.2);
+  }
+}
+
