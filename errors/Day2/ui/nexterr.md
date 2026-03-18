@@ -1,4 +1,4 @@
-# lost
+# previous npm install errors gone but now these
 
 ```bash
 lsetga@lsetga:~/Projects/episteme/frontend$ npm run dev
