@@ -1,0 +1,66 @@
+# dOn't really know the errors here just guessed
+
+```bash
+<(venv) lsetga@lsetga:~/Projects/episteme/backend$ python manage.py runserver
+Watching for file changes with StatReloader
+INFO 2026-03-18 13:48:30,698 autoreload 349625 133181861240960 Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/lsetga/Projects/episteme/backend/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py", line 48, in get_internal_wsgi_application
+    return import_string(app_path)
+  File "/home/lsetga/Projects/episteme/backend/venv/lib/python3.10/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/home/lsetga/Projects/episteme/backend/venv/lib/python3.10/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/lsetga/Projects/episteme/backend/config/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/lsetga/Projects/episteme/backend/venv/lib/python3.10/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    return WSGIHandler()
+  File "/home/lsetga/Projects/episteme/backend/venv/lib/python3.10/site-packages/django/core/handlers/wsgi.py", line 118, in __init__
+    self.load_middleware()
+  File "/home/lsetga/Projects/episteme/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 40, in load_middleware
+    middleware = import_string(middleware_path)
+  File "/home/lsetga/Projects/episteme/backend/venv/lib/python3.10/site-packages/django/utils/module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+  File "/home/lsetga/Projects/episteme/backend/venv/lib/python3.10/site-packages/django/utils/module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'debug_toolbar'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/lsetga/Projects/episteme/backend/venv/lib/python3.10/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/lsetga/Projects/episteme/backend/venv/lib/python3.10/site-packages/django/core/management/commands/runserver.py", line 143, in inner_run
+    handler = self.get_handler(*args, **options)
+  File "/home/lsetga/Projects/episteme/backend/venv/lib/python3.10/site-packages/django/contrib/staticfiles/management/commands/runserver.py", line 31, in get_handler
+    handler = super().get_handler(*args, **options)
+  File "/home/lsetga/Projects/episteme/backend/venv/lib/python3.10/site-packages/django/core/management/commands/runserver.py", line 73, in get_handler
+    return get_internal_wsgi_application()
+  File "/home/lsetga/Projects/episteme/backend/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py", line 50, in get_internal_wsgi_application
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: WSGI application 'config.wsgi.application' could not be loaded; Error importing module.>
