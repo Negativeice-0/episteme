@@ -176,7 +176,7 @@ class FixedErrorTracker:
         
         print("\n✅ All fixes applied!")
         print("\n🔄 Run the scanner again to verify:")
-        print("   python scripts/fixed_error_tracker.py")
+        print("   python scripts/error_tracker.py")
     
     def create_file(self, filename):
         """Create missing Python file"""
