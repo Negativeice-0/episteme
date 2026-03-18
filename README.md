@@ -5,6 +5,7 @@
 Episteme is a web application that critiques Linear Regression against modern ML models (Random Forest, XGBoost) and embeds Socratic learning prompts. Built for academic adoption, it helps students understand the limitations of linear models in human systems.
 
 Super user is lsetga and school admission number.
+This <python scripts/error_tracker.py> is a significant improvement to aid with issues.
 
 ## 🎯 Mission
 
